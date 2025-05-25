@@ -58,7 +58,7 @@ let
       ''--set NVIM_NIX "1"''
       ''--set NVIM_APPNAME "${appName}"''
     ]
-    ++ (lib.optionals with-config [ ''--set XDG_CONFIG_HOME "${nvimHome.outPath}"'' ])
+    ++ (lib.optionals with-config [ ''--set XDG_CONFIG_HOME "~/.config/nvim"'' ])
     ++ (lib.optionals opts.withSQLite [
       ''--set LIBSQLITE "${pkgs.sqlite.out}/lib/libsqlite3.${
         if pkgs.stdenv.isDarwin then "dylib" else "so"
