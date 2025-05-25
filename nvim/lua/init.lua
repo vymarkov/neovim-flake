@@ -7,11 +7,11 @@ return function()
     -- nvim packaged with nix
     --
 
-    require("aorith.globals")
-    require("aorith.config.options")
-    require("aorith.config.remap")
-    require("aorith.config.autocomands")
-    require("aorith.config.lazy")
+    require("globals")
+    require("config.options")
+    require("config.remap")
+    require("config.autocomands")
+    require("config.lazy")
   else
     --
     -- nvim without nix

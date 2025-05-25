@@ -1,3 +1,7 @@
 vim.loader.enable()
 
-require("aorith")()
+require("globals")
+require("config.options")
+require("config.remap")
+require("config.autocomands")
+require("config.lazy")
