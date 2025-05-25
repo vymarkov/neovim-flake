@@ -6,20 +6,12 @@ return function()
     --
     -- nvim packaged with nix
     --
-    require("aorith.plugins.theme")
-    require("aorith.core.options")
-    require("aorith.core.autocmds")
-    require("aorith.core.keymaps")
 
-    require("aorith.plugins.mini")
-    require("aorith.plugins.neotree")
-    require("aorith.plugins.aerial")
-
-    require("aorith.plugins.treesitter")
-
-    require("aorith.plugins.lsp")
-    require("aorith.plugins.linting")
-    require("aorith.plugins.formatting")
+    require("aorith.globals")
+    require("aorith.config.options")
+    require("aorith.config.remap")
+    require("aorith.config.autocomands")
+    require("aorith.config.lazy")
   else
     --
     -- nvim without nix
@@ -29,7 +21,5 @@ return function()
     vim.g.loaded_python_provider = 0
     vim.g.loaded_python3_provider = 0
     vim.g.loaded_ruby_provider = 0
-
-    require("aorith.mini_deps")()
   end
 end
